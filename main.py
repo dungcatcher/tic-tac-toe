@@ -1,4 +1,5 @@
 import pygame
+import os
 
 pygame.init()
 pygame.font.init()
@@ -16,8 +17,8 @@ WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.init()
 pygame.display.set_caption("Tic Tac Toe")
 
-result_font = pygame.font.Font(r"C:\Users\ewano\PycharmProjects\Pygame\games\tictactoe\Assets\Montserrat-Regular.ttf", 90)
-reset_font = pygame.font.SysFont(r"C:\Users\ewano\PycharmProjects\Pygame\games\tictactoe\Assets\Montserrat-Regular.ttf", 55)
+result_font = pygame.font.Font(os.path.abspath('Montserrat-Regular.ttf'), 90)
+reset_font = pygame.font.Font(os.path.abspath('Montserrat-Regular.ttf'), 55)
 
 SQUARE_SIZE = 200
 
@@ -27,8 +28,8 @@ board = [
     [0, 0, 0]
 ]
 
-cross = pygame.image.load(r'C:\Users\ewano\PycharmProjects\Pygame\games\tictactoe\Assets\cross.png')
-nought = pygame.image.load(r'C:\Users\ewano\PycharmProjects\Pygame\games\tictactoe\Assets\nought.png')
+cross = pygame.image.load(os.path.abspath('cross.png'))
+nought = pygame.image.load(os.path.abspath('nought.png'))
 
 taken_squares = []
 
